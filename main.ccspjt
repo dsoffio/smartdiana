@@ -17,7 +17,7 @@ Type=4
 forcecoff=0
 
 [ProjectLog]
-Days=3
+Days=4
 D1=01-04-2020
 D1_L=14
 D1_L1=[52149]Project Opened.
@@ -33,7 +33,7 @@ D1_L10=[59592]Started Editing.
 D1_L11=[60999]Stopped Editing.
 D1_L12=[65187]Started Editing.
 D1_L13=[66351]Stopped Editing.
-TotalEdit=47
+TotalEdit=53
 TotalDebug=0
 D1_E=46
 D1_D=0
@@ -52,18 +52,27 @@ D3_L5=[48777]Stopped Editing.
 D3_E=1
 D3_D=0
 D3_L6=[52346]Project Closed.
+D4=17-04-2020
+D4_L=5
+D4_L1=[55749]Project Opened.
+D4_L2=[55765]Started Editing.
+D4_L3=[56395]Stopped Editing.
+D4_E=6
+D4_D=0
+D4_L4=[56621]Project Closed.
+D4_L5=[56632]Project Opened.
 
 [Opened Files]
 1=main.c
 t1=1
 2=main.h
 t2=1
-Count=2
+Count=1
 [main.c]
 Type=4
 
 [defines]
-buildcount=3
+buildcount=4
 [Units]
 Count=1
 1=main (main)
