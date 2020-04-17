@@ -1,0 +1,50 @@
+#include <main.h>
+
+
+#INT_RB // de la B4 a B7
+void  interrupt (void) 
+{
+
+}
+
+void main()
+{
+
+   port_b_pullups (TRUE);                  //Habilita pull-up internos del puerto B        
+   enable_interrupts(INT_RB);              // Habilita la interrupcion del puerto B ( RB4 - RB7).
+   enable_interrupts(GLOBAL);              // Habilita las interrupciones globales.
+   ext_int_edge(H_TO_L);
+   while(TRUE)
+   {
+
+
+      //TODO: User Code
+   }
+
+}
+
+#INT_RB 
+void muestreo_delay (void)  // Si ocurre una int siempre mando el address_real a 1 (no cero asi puedo colocar el address delay ahi para tener cero delay)
+{                           // 14000 ms/500ms = 28 pasos --> 131071/28 aprox 4680
+      address_real=1;
+      
+      if (input_state(pin_B6)==0) // Se pulsó el botón de SUMAR delay
+      {
+      //--------- Multiplicador mas grande, direecion de memoria mas chica
+        multiplicador= multiplicador +1;            // incremento el multiplicador porque quiero mas delay 
+        
+        if (multiplicador>=28) multiplicador=27;   //
+        delay_address= 4680 * 28 - 4680 * multiplicador ; //4680 * (28 -  multiplicador) ;
+        
+      }
+      else  if (input_state(pin_B7)==0)          // Se  pulsó el botón de RESTAR delay 
+      {
+      //--------- Multiplicador mas chico, dir de memoria mas grande
+      multiplicador= multiplicador  - 1;             // Decremento el multiplicador porque quiero menos delay 
+       if (multiplicador<=0)  delay_address= 0;      //minimo delay
+       
+       if (multiplicador>0)  delay_address= 4680 * 28 - 4680 * multiplicador ;
+      }
+    
+}
+

@@ -1,0 +1,69 @@
+[PROJECT]
+Target=main.hex
+Processor_Text=PIC16F877A
+CCSVerions=5.076
+Compiler=PCM
+CCSVersion=5.076
+[Target Data]
+FileList=main.c
+[Directories]
+Include=
+[D:\Proyectos\Smart Diana\main]
+Type=4
+[mru-list]
+1=main.c
+
+[fileformats]
+forcecoff=0
+
+[ProjectLog]
+Days=3
+D1=01-04-2020
+D1_L=14
+D1_L1=[52149]Project Opened.
+D1_L2=[54599]Started Editing.
+D1_L3=[54900]Stopped Editing.
+D1_L4=[54932]Started Editing.
+D1_L5=[55339]Stopped Editing.
+D1_L6=[56182]Started Editing.
+D1_L7=[56814]Stopped Editing.
+D1_L8=[57130]Started Editing.
+D1_L9=[57437]Stopped Editing.
+D1_L10=[59592]Started Editing.
+D1_L11=[60999]Stopped Editing.
+D1_L12=[65187]Started Editing.
+D1_L13=[66351]Stopped Editing.
+TotalEdit=47
+TotalDebug=0
+D1_E=46
+D1_D=0
+D1_L14=[66351]Project Closed.
+D2=02-04-2020
+D2_L=2
+D2_L1=[50790]Project Opened.
+D2_L2=[53030]Project Closed.
+D3=08-04-2020
+D3_L=6
+D3_L1=[48116]Project Opened.
+D3_L2=[48144]Started Editing.
+D3_L3=[48456]Stopped Editing.
+D3_L4=[48471]Started Editing.
+D3_L5=[48777]Stopped Editing.
+D3_E=1
+D3_D=0
+D3_L6=[52346]Project Closed.
+
+[Opened Files]
+1=main.c
+t1=1
+2=main.h
+t2=1
+Count=2
+[main.c]
+Type=4
+
+[defines]
+buildcount=3
+[Units]
+Count=1
+1=main (main)

@@ -1,0 +1,39 @@
+#include <main.h>
+
+int32 TE1, TE2, TE3;
+
+
+//Velocidad sonido: a 20° --------- 343.31 m/s
+//                  a 24° --------- 345.65 m/s
+
+void main()
+{ 
+   int D=20; // distancia entre los 2 micrófonos (cm)
+   float d1, d2;
+
+   port_b_pullups (TRUE);                  //Habilita pull-up internos del puerto B        
+   enable_interrupts(INT_RB);              // Habilita la interrupcion del puerto B ( RB4 - RB7).
+   enable_interrupts(GLOBAL);              // Habilita las interrupciones globales.
+   ext_int_edge(H_TO_L);
+   setup_timer_1(T1_INTERNAL|T1_DIV_BY_8); //a 20MHz cuenta de a 1.6uS
+   while(TRUE)
+   {
+     if(input_state(pin_B4)==0)
+       { 
+        TE1=get_timer1();
+        set_timer1(0);
+       }
+     
+     if (input_state(pin_B5)==0)
+       {
+        TE2=get_timer1();
+        set_timer1(0);
+     
+   }
+    d1= (float) 345.65 * TE2;
+    d2= (float) 345.65 * TE1;
+
+  }
+}
+
+

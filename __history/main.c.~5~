@@ -1,0 +1,27 @@
+#include <main.h>
+
+int32 TE1, TE2, TE3;
+#INT_RB4 // de la B4 a B7
+void  interrupt (void) 
+{
+ setup_timer_1(T1_INTERNAL|T1_DIV_BY_8);  //a 20MHz cuenta de a 1.6uS
+ TE=get_timer1();
+}
+
+void main()
+{ 
+
+   port_b_pullups (TRUE);                  //Habilita pull-up internos del puerto B        
+   enable_interrupts(INT_RB);              // Habilita la interrupcion del puerto B ( RB4 - RB7).
+   enable_interrupts(GLOBAL);              // Habilita las interrupciones globales.
+   ext_int_edge(H_TO_L);
+   while(TRUE)
+   {
+
+
+      //TODO: User Code
+   }
+
+}
+
+
